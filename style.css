@@ -140,18 +140,19 @@ HOME
 }
 
 .home .hero .img-bottom.img-left {
-    height: 35vh;
+    height: 30vh;
 }
 
 .home .hero .img-bottom.img-right {
-    height: 40vh;
+    height: 35vh;
 }
 
 /* Sets the wedding date below the h1 */
 .home .date {
     color: var(--green);
-    font-size: 5rem;
+    font-size: 3rem;
     margin-top: 2rem;
+    margin-bottom: 0rem;
 }
 
 /***
@@ -168,7 +169,7 @@ RSVP Button
 
 /* Defines size of the button and basic effects */
 .rsvp a img {
-    height: 100px;
+    height: 3rem;
     transition: all 0.8s ease-in-out;
     box-shadow: var(--shadow-2-elevation-medium);
     border-radius: 100px;
