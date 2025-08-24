@@ -190,6 +190,18 @@ Please, fill in the form before January 31, 2026.</p>
         </div>
     </section>
     <section class="standard alt">
+      <div id="countdown"></div>
+      <script>
+        const date = new Date("2026-10-10T00:00:00");
+        const el = document.getElementById("countdown");
+        setInterval(() => {
+          const now = new Date();
+          const diff = date - now;
+          const days = Math.floor(diff / (1000*60*60*24));
+          const hours = Math.floor((diff / (1000*60*60)) % 24);
+          el.textContent = `${days} days, ${hours} hours to go!`;
+        }, 1000);
+      </script>
       <p class="hugetext">
         <strong>While we wait...</strong>
       </p> 
@@ -244,18 +256,6 @@ Please, fill in the form before January 31, 2026.</p>
           document.getElementById('score').textContent = `Time's up! You caught ${score} plates.`;
         }
       </script>
-              <div id="countdown"></div>
-              <script>
-                const date = new Date("2026-10-10T00:00:00");
-                const el = document.getElementById("countdown");
-                setInterval(() => {
-                  const now = new Date();
-                  const diff = date - now;
-                  const days = Math.floor(diff / (1000*60*60*24));
-                  const hours = Math.floor((diff / (1000*60*60)) % 24);
-                  el.textContent = `${days} days, ${hours} hours to go!`;
-                }, 1000);
-              </script>
     </section>
 </body>
 </html>
