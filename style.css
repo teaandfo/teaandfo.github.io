@@ -151,7 +151,7 @@ HOME
 /* Sets the wedding date below the h1 */
 .home .date {
     color: var(--green);
-    font-size: 3rem;
+    font-size: 5vw; /* Scales between 16px and 20px */
     margin-top: 2rem;
     margin-bottom: 0rem;
 }
@@ -170,7 +170,7 @@ RSVP Button
 
 /* Defines size of the button and basic effects */
 .rsvp a img {
-    height: 3rem;
+    height: 15vw;
     transition: all 0.8s ease-in-out;
     box-shadow: var(--shadow-2-elevation-medium);
     border-radius: 100px;
@@ -193,21 +193,21 @@ div.box {
 
 h1,
 p.bigtext {
-    font-size: 4rem;
+    font-size: 4vw;
     /* line-height: 1.2rem; */
     padding: 0px;
     margin: 0px;
 }
 p.smalltext {
-    font-size: 2rem;
+    font-size: 4vw;
     /* line-height: 1.2rem; */
-    line-height: 2.5rem;
+    line-height: 4.5vw;
     padding: 0px;
     margin: 0px;
 }
 
 p.hugetext {
-    font-size: 5rem;
+    font-size: 5vw;
     padding: 0px;
     margin: 0px;
 }
@@ -237,8 +237,8 @@ div.break {
 }
 
 div.break.top {
-    margin-bottom: 5rem;
-    margin-top: 2rem;
+    margin-bottom: 5vw;
+    margin-top: 2vw;
 }
 
 div.break.bottom {
@@ -255,8 +255,8 @@ div.smallbreak.top {
 }
 
 div.smallbreak.bottom {
-    margin-bottom: 2rem;
-    margin-top: 5rem;
+    margin-bottom: 1vw;
+    margin-top: 1vw;
 }
 
 
