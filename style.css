@@ -150,7 +150,7 @@ HOME
 /* Sets the wedding date below the h1 */
 .home .date {
     color: var(--green);
-    font-size: 4.2rem;
+    font-size: 5rem;
     margin-top: 2rem;
 }
 
@@ -168,7 +168,7 @@ RSVP Button
 
 /* Defines size of the button and basic effects */
 .rsvp a img {
-    height: 180px;
+    height: 100px;
     transition: all 0.8s ease-in-out;
     box-shadow: var(--shadow-2-elevation-medium);
     border-radius: 100px;
@@ -176,8 +176,7 @@ RSVP Button
 
 /* Button hover effect */
 .rsvp a:hover img {
-    transform: scale(1.1);
-    box-shadow: var(--shadow-2-elevation-high);
+    transform: scale(1.5);
 }
 
 /* section.standard,
