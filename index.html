@@ -189,5 +189,73 @@
 Please, fill in the form before January 31, 2026.</p>
         </div>
     </section>
+    <section class="standard alt">
+      <p class="hugetext">
+        <strong>While we wait...</strong>
+      </p> 
+      <h2>Catch the pasta plate!</h2>
+      <p>Click the pasta plate as many times as you can before time runs out!</p>
+      <button onclick="startGame()">Start Game</button>
+      <div id="game-area" style="position:relative; width:300px; height:300px; border:1px solid var(--beige); margin-top:20px;"></div>
+      <p id="score"></p>
+
+      <script>
+        let score = 0;
+        let timeLeft = 20;
+        let gameInterval;
+        let bouquet;
+
+        function startGame() {
+          score = 0;
+          timeLeft = 20;
+          document.getElementById('score').textContent = '';
+          const gameArea = document.getElementById('game-area');
+          gameArea.innerHTML = '';
+          bouquet = document.createElement('img');
+          bouquet.src = 'assets/PastaPlate.png';
+          bouquet.style.position = 'absolute';
+          bouquet.style.width = '100px';
+          bouquet.style.cursor = 'pointer';
+          bouquet.addEventListener('click', () => {
+            score++;
+            moveBouquet();
+          });
+          gameArea.appendChild(bouquet);
+          moveBouquet();
+          gameInterval = setInterval(() => {
+            timeLeft--;
+            if (timeLeft <= 0) {
+              endGame();
+            }
+          }, 1000);
+        }
+
+        function moveBouquet() {
+          const gameArea = document.getElementById('game-area');
+          const x = Math.random() * (gameArea.clientWidth - 50);
+          const y = Math.random() * (gameArea.clientHeight - 50);
+          bouquet.style.left = x + 'px';
+          bouquet.style.top = y + 'px';
+        }
+
+        function endGame() {
+          clearInterval(gameInterval);
+          document.getElementById('game-area').innerHTML = '';
+          document.getElementById('score').textContent = `Time's up! You caught ${score} plates.`;
+        }
+      </script>
+              <div id="countdown"></div>
+              <script>
+                const date = new Date("2026-10-10T00:00:00");
+                const el = document.getElementById("countdown");
+                setInterval(() => {
+                  const now = new Date();
+                  const diff = date - now;
+                  const days = Math.floor(diff / (1000*60*60*24));
+                  const hours = Math.floor((diff / (1000*60*60)) % 24);
+                  el.textContent = `${days} days, ${hours} hours to go!`;
+                }, 1000);
+              </script>
+    </section>
 </body>
 </html>
