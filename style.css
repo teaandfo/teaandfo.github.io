@@ -50,7 +50,7 @@ div {
 /* Sets minimum height for the sections, so they look better  */
 section {
     overflow: hidden;
-    min-height: 90vh;
+    min-height: 100vh;
 }
 
 /* Basic font settings  */
@@ -197,6 +197,13 @@ p.bigtext {
     padding: 0px;
     margin: 0px;
 }
+p.smalltext {
+    font-size: 2rem;
+    /* line-height: 1.2rem; */
+    line-height: 2.5rem;
+    padding: 10px;
+    margin: 1px;
+}
 
 p.hugetext {
     font-size: 5rem;
@@ -220,6 +227,33 @@ div.divider.top {
 }
 
 div.divider.bottom {
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+}
+
+div.break {
+    width: 25%;
+}
+
+div.break.top {
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+}
+
+div.break.bottom {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+div.smallbreak {
+    width: 25%;
+}
+
+div.smallbreak.top {
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+}
+
+div.smallbreak.bottom {
     margin-bottom: 2rem;
     margin-top: 5rem;
 }
