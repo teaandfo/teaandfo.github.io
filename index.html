@@ -202,7 +202,7 @@ Please, fill in the form before January 31, 2026.</p>
       <p id="score"></p>
       <div id="nameModal" class="modal">
         <div class="modal-content">
-          <h3>Game Over!</h3>
+          <h3 id="scoreMessage">Game Over!</h3>
           <p>Enter your name for the leaderboard:</p>
           <input type="text" id="playerName" placeholder="Your Name" maxlength="20">
           <button id="submitName">Submit</button>
@@ -271,6 +271,7 @@ Please, fill in the form before January 31, 2026.</p>
               endGame();
             }
           }, 1000);
+          displayLeaderboard();
         }
     
         function moveBouquet() {
@@ -289,8 +290,11 @@ Please, fill in the form before January 31, 2026.</p>
           const modal = document.getElementById('nameModal');
           const input = document.getElementById('playerName');
           const button = document.getElementById('submitName');
-          modal.style.display = 'block';
+          const scoreMessage = document.getElementById('scoreMessage');
+
+          scoreMessage.textContent = `You scored ${score}!`;
           input.value = '';  // clear previous input
+          modal.style.display = 'block';
           input.focus();
 
           button.onclick = () => {
@@ -298,6 +302,7 @@ Please, fill in the form before January 31, 2026.</p>
             if (name) {
               saveScore(name, score);
               modal.style.display = 'none';
+              displayLeaderboard();  // refresh the leaderboard immediately
             } else {
               alert("Please enter your name!");
             }
