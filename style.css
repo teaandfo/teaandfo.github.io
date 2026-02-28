@@ -206,7 +206,7 @@ p.smalltext {
     margin: 0px;
 }
 p.supersmalltext {
-    font-size: 1.5vw;
+    font-size: 3vh;
     /* line-height: 1.2rem; */
     line-height: 4.5vw;
     padding: 0px;
