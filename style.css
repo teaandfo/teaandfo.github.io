@@ -205,6 +205,20 @@ p.smalltext {
     padding: 0px;
     margin: 0px;
 }
+p.supersmalltext {
+    font-size: 1.5vw;
+    /* line-height: 1.2rem; */
+    line-height: 4.5vw;
+    padding: 0px;
+    margin: 0px;
+}
+p.kindasmalltext {
+    font-size: 2.5vw;
+    /* line-height: 1.2rem; */
+    line-height: 4.5vw;
+    padding: 0px;
+    margin: 0px;
+}
 
 p.hugetext {
     font-size: 7vw;
@@ -1403,4 +1417,39 @@ RESPONSIVENESS
 a[href^="tel"]{
     color:inherit;
     text-decoration:none;
+}
+ul,
+ol {
+    align-items: flex-start;   /* flex alignment for list container */
+    text-align: left;          /* aligns text inside */
+    justify-content: flex-start; /* optional if using flex */
+}
+
+ol > * + * {
+    margin-top: 1rem;
+}
+
+li {
+/* 	break-inside: avoid; */
+}
+
+::marker {
+	content: counters(list-item, '') ': ';
+	font-weight: 700;
+	font-size: 0.0em;
+    align-items: flex;
+    text-align: flex;
+    display: flex;
+}
+
+li span {
+	display: block;
+}
+
+li span:first-child {
+	font-size: 1.5em;
+}
+
+li span:last-child {
+	font-style: italic;
 }
