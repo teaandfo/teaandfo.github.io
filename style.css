@@ -422,6 +422,42 @@ a.button:hover {
     transform: scale(1.05);
 }
 
+/*** DOWNLOAD PDF BUTTON ***/
+
+a.download-pdf,
+a.download-pdf:visited {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 6;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    background: var(--green);
+    padding: 12px 22px;
+    border-radius: 500px;
+    box-shadow: var(--shadow-1-elevation-medium);
+    transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
+    white-space: nowrap;
+}
+
+a.download-pdf:hover {
+    color: white;
+    box-shadow: var(--shadow-1-elevation-high);
+    transform: scale(1.05);
+}
+
+@media (max-width: 576px) {
+    a.download-pdf,
+    a.download-pdf:visited {
+        font-size: 0.85rem;
+        padding: 10px 16px;
+        bottom: 1rem;
+        right: 1rem;
+    }
+}
+
 /*** GIFT SECTION ***/
 
 section.gift {
