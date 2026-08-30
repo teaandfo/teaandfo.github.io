@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tea & Forrest | Wedding Booklet</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap"
+        rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Amalfi-Coast';
+            src: url('assets/fonts/Amalfi-Coast.ttf.woff') format('woff'),
+                 url('assets/fonts/Amalfi-Coast.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        :root {
+            --green: #132404;
+            --altbbg: #969f83;
+            --beige: #f0f5e6;
+        }
+
+        * { box-sizing: border-box; }
+
+        @page {
+            size: letter;
+            margin: 0;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--green);
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .page {
+            position: relative;
+            width: 8.5in;
+            height: 11in;
+            padding: 0.9in 1in;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            page-break-after: always;
+            break-after: page;
+            background: var(--beige);
+            overflow: hidden;
+        }
+
+        .page:last-child {
+            page-break-after: auto;
+            break-after: auto;
+        }
+
+        .page.center { justify-content: center; }
+        .page.alt { background: var(--altbbg); }
+
+        /* Cover */
+        .cover-title {
+            font-family: 'Amalfi-Coast';
+            font-size: 68pt;
+            line-height: 1.02;
+            margin: 0;
+        }
+        .cover-dates {
+            font-size: 20pt;
+            margin-top: 0.5in;
+            letter-spacing: 1px;
+        }
+        .cover-venue {
+            font-size: 20pt;
+            margin-top: 0.1in;
+            font-style: italic;
+        }
+        .corner {
+            position: absolute;
+            width: 2.1in;
+        }
+        .corner.tl { top: -0.3in; left: -0.3in; }
+        .corner.tr { top: -0.3in; right: -0.3in; }
+        .corner.bl { bottom: -0.3in; left: -0.3in; }
+        .corner.br { bottom: -0.3in; right: -0.3in; }
+
+        /* Section pages */
+        .section-title {
+            font-family: 'Amalfi-Coast';
+            font-size: 30pt;
+            margin: 0 0 0.15in;
+        }
+        .lead {
+            font-size: 16pt;
+            font-style: italic;
+            max-width: 5.6in;
+            margin: 0 auto 0.25in;
+        }
+        .rule {
+            width: 1.6in;
+            border-bottom: 1.2px solid var(--green);
+            margin: 0.28in 0;
+        }
+        .day-label {
+            font-size: 15pt;
+            letter-spacing: 2px;
+            margin: 0.1in 0 0.02in;
+        }
+        .day-name {
+            font-size: 24pt;
+            margin: 0 0 0.05in;
+        }
+        .attire {
+            font-size: 12.5pt;
+            font-style: italic;
+            max-width: 5.4in;
+            margin: 0 auto 0.12in;
+        }
+        .times {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 5.2in;
+            text-align: left;
+            font-size: 13pt;
+            line-height: 1.5;
+        }
+        .times li { margin-bottom: 0.05in; }
+        .times .t { font-weight: 600; }
+
+        .body-text {
+            font-size: 14pt;
+            line-height: 1.55;
+            max-width: 5.6in;
+            margin: 0 auto 0.16in;
+        }
+        .sub-head {
+            font-family: 'Amalfi-Coast';
+            font-size: 20pt;
+            margin: 0.2in 0 0.12in;
+        }
+        .footnote {
+            font-size: 11.5pt;
+            font-style: italic;
+            margin-top: 0.3in;
+            opacity: 0.85;
+        }
+        strong { font-weight: 600; }
+        .content { width: 100%; }
+    </style>
+</head>
+
+<body>
+
+    <!-- PAGE 1 — COVER -->
+    <section class="page cover center">
+        <img class="corner tl" src="assets/Pasta.png">
+        <img class="corner tr" src="assets/Olive.png">
+        <img class="corner bl" src="assets/Garlic.png">
+        <img class="corner br" src="assets/Farfalle.png">
+        <h1 class="cover-title">Tea<br>&amp;<br>Forrest</h1>
+        <p class="cover-dates">10 | 9 | 2026 &nbsp;&mdash;&nbsp; 10 | 11 | 2026</p>
+        <p class="cover-venue">San Galgano Abbey</p>
+    </section>
+
+    <!-- PAGE 2 — SCHEDULE -->
+    <section class="page center">
+        <div class="content">
+            <h2 class="section-title">The Weekend</h2>
+            <div class="rule" style="margin-left:auto;margin-right:auto;"></div>
+
+            <p class="day-label">10 | 9 | 26</p>
+            <p class="day-name">Festa di Benvenuto</p>
+            <p class="attire"><strong>Semi-Formal Attire</strong> — Italian countryside dinner, with effortless elegance and a romantic touch.</p>
+            <ul class="times">
+                <li><span class="t">3:00 PM</span> — Shuttle arrival at SG Farmhouse &amp; check-in</li>
+                <li><span class="t">6:30 PM</span> — Tuscan Welcome, an opening toast as the sun sets</li>
+                <li><span class="t">7:30 PM</span> — La Dolce Sera, welcome celebration with live music &amp; an interactive culinary experience</li>
+            </ul>
+
+            <div class="rule" style="margin-left:auto;margin-right:auto;"></div>
+
+            <p class="day-label">10 | 10 | 26</p>
+            <p class="day-name">Il Matrimonio</p>
+            <p class="attire"><strong>Formal Attire</strong> — All-black requested, with tuxedos / black suits and floor-length black gowns.</p>
+            <ul class="times">
+                <li><span class="t">8:00 AM – 1:00 PM</span> — Explore &amp; enjoy; wander the grounds or lounge by the lake</li>
+                <li><span class="t">3:30 PM</span> — Ceremony walkover</li>
+                <li><span class="t">4:00 PM</span> — Ceremony</li>
+                <li><span class="t">5:00 PM</span> — Aperitif</li>
+                <li><span class="t">7:00 – 9:00 PM</span> — Dinner &amp; dessert</li>
+                <li><span class="t">9:00 PM – Midnight</span> — Tuscany After Dark; music &amp; dancing!</li>
+            </ul>
+
+            <div class="rule" style="margin-left:auto;margin-right:auto;"></div>
+
+            <p class="day-label">10 | 11 | 26</p>
+            <p class="day-name">Arrivederci!</p>
+            <ul class="times">
+                <li><span class="t">8:00 – 10:00 AM</span> — Farewell farmhouse breakfast</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- PAGE 3 — ACCOMMODATIONS -->
+    <section class="page alt center">
+        <div class="content">
+            <h2 class="section-title">Abbazia di San Galgano</h2>
+            <p class="body-text">Strada Comunale di S. Galgano, 53012 Chiusdino SI, Italy</p>
+            <p class="body-text">
+                We're holding a <strong>small ceremony</strong> at the breathtaking <strong>San Galgano Abbey</strong>
+                in Chiusdino, Tuscany — a roofless 13th-century Gothic cathedral surrounded by rolling hills and
+                cypress trees. Guests will spend the weekend at <strong>The Farmhouse at Terre di San Galgano</strong>,
+                a 3-minute walk from the Abbey, where all festivities will be held.
+            </p>
+
+            <p class="sub-head">Where to Stay</p>
+            <p class="body-text">
+                We are delighted to be <strong>covering accommodations for all guests at The Farmhouse on
+                Friday and Saturday nights</strong> of the wedding weekend, including breakfast on Saturday and
+                Sunday mornings.
+            </p>
+            <p class="body-text">
+                If you'd like to extend your stay through Sunday evening, <strong>please indicate this in your
+                RSVP</strong> — we'll share room options and pricing by email based on your interest.
+            </p>
+        </div>
+    </section>
+
+    <!-- PAGE 4 — TRAVEL -->
+    <section class="page center">
+        <div class="content">
+            <h2 class="section-title">Getting There</h2>
+            <div class="rule" style="margin-left:auto;margin-right:auto;"></div>
+            <p class="body-text">
+                The closest airports are <strong>Florence (FLR)</strong> and <strong>Rome (FCO)</strong>. We recommend
+                booking flights once October 2026 schedules are available.
+            </p>
+            <p class="body-text">
+                From either airport, take a train to <strong>Siena</strong> via Trenitalia — roughly 1.5 hours from
+                Florence, or 3–4 hours from Rome, usually with one transfer. We suggest buying tickets on arrival in
+                case of flight delays.
+            </p>
+            <p class="body-text">
+                Need help with train times? Share your flight details via our travel form
+                (<strong>forms.gle/oPDQTg5WWV8URcur9</strong>) and we'll gladly help coordinate.
+            </p>
+
+            <p class="sub-head">Shuttle to San Galgano</p>
+            <p class="body-text">
+                A shuttle will depart from <strong>Siena train station at 2:00 PM on Friday, October 9</strong>.
+                The exact pickup location will be shared closer to the date.
+            </p>
+            <p class="footnote">A step-by-step airport-to-train-station guide is on our website.</p>
+        </div>
+    </section>
+
+    <!-- PAGE 5 — THINGS TO DO -->
+    <section class="page alt center">
+        <div class="content">
+            <h2 class="section-title">Things to Do</h2>
+            <p class="lead">A few of our favorites, right around the abbey.</p>
+            <div class="rule" style="margin-left:auto;margin-right:auto;"></div>
+
+            <p class="sub-head">Montesiepi Chapel &amp; the Sword in the Stone</p>
+            <p class="body-text">
+                Just north of the abbey, a short walk up the hill, is Montesiepi Chapel — home to the famous
+                <strong>"sword in the stone."</strong> Nearby you'll find a wine bar with local wine and snacks.
+                Definitely worth checking out.
+            </p>
+
+            <p class="sub-head">Trails &amp; Hiking</p>
+            <p class="body-text">
+                There are several miles of trails around the grounds. A roughly <strong>3-mile hike</strong> to the
+                neighboring town of <strong>Monticiano</strong> starts behind the abbey — follow the trail down to
+                the bridge, and hiking signs lead the rest of the way.
+            </p>
+        </div>
+    </section>
+
+    <!-- PAGE 6 — RSVP -->
+    <section class="page center">
+        <div class="content">
+            <h2 class="section-title">We hope you'll join us</h2>
+            <div class="rule" style="margin-left:auto;margin-right:auto;"></div>
+            <p class="body-text">
+                Our wedding ceremony will take place in Tuscany, followed by a larger celebration in Chicago.
+                While we'd love to have everyone in Italy, the ceremony is an intimate gathering reserved only for
+                those whose names appear on the physical save-the-date card.
+            </p>
+            <p class="body-text">
+                If this seems different from the way your envelope is addressed, please know that it reflects the
+                guest list for our Chicago reception.
+            </p>
+            <div class="rule" style="margin-left:auto;margin-right:auto;"></div>
+            <p class="body-text"><strong>Please RSVP before May 31, 2026.</strong></p>
+            <p class="footnote">With love, Tea &amp; Forrest</p>
+        </div>
+    </section>
+
+</body>
+</html>
